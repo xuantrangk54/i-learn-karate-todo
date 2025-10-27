@@ -29,6 +29,11 @@ Run simple feature with mock api
 mvn clean test -Dtest=LocalRunner
 ```
 
+Fix F12 to soure souce code Java by 
+```
+mvn dependency:sources
+```
+
 
 # Instructions
 
