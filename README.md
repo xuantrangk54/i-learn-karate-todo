@@ -11,7 +11,17 @@ Use the official Karate IDE plugins for the best developer experience:
 * [Karate extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=karatelabs.karate)
 * [Karate plugin for IntelliJ IDEA](https://plugins.jetbrains.com/plugin/19232-karate)
 
+
+
+
 # My Command
+
+Only run server to test at 'http://localhost:8080'
+
+```
+mvn clean test -Dtest=StartTestServer
+```
+
 Run simple feature with mock api 
 
 
