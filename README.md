@@ -11,6 +11,15 @@ Use the official Karate IDE plugins for the best developer experience:
 * [Karate extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=karatelabs.karate)
 * [Karate plugin for IntelliJ IDEA](https://plugins.jetbrains.com/plugin/19232-karate)
 
+# My Command
+Run simple feature with mock api 
+
+
+```
+mvn clean test -Dtest=LocalRunner
+```
+
+
 # Instructions
 
 > You can use [GitHub Codespaces](https://github.com/karatelabs/karate/wiki/Get-Started:-GitHub-Codespaces) to open this project directly in your browswer ! The default image includes Java and Maven, so you can skip the "Prerequisites" section below and go directly to [Verify Setup](#verify-setup). Make sure you install the [Karate extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=karatelabs.karate) in your Codespace. The Karate extension for VS Code can also be run in a Docker based [devcontainer](https://code.visualstudio.com/docs/devcontainers/containers).
@@ -99,3 +108,116 @@ Documentation: [Karate API Performance Testing](https://karatelabs.github.io/kar
 # Gradle
 
 A sample `build.gradle` and instructions can be found [here](https://github.com/karatelabs/karate-todo/wiki/Gradle).
+```
+i-learn-karate-todo
+├─ .mvn
+│  └─ wrapper
+│     └─ maven-wrapper.properties
+├─ cfg
+│  ├─ build-docker-app.sh
+│  ├─ build-docker-mvn.sh
+│  ├─ Dockerfile-app
+│  ├─ Dockerfile-mvn
+│  └─ README.md
+├─ mvnw
+├─ mvnw.cmd
+├─ pom.xml
+├─ README.md
+└─ src
+   ├─ main
+   │  └─ java
+   │     ├─ app
+   │     │  ├─ api
+   │     │  │  ├─ claims.js
+   │     │  │  ├─ reset.js
+   │     │  │  ├─ submissions.js
+   │     │  │  └─ todos.js
+   │     │  ├─ App.java
+   │     │  ├─ claims-main.html
+   │     │  ├─ claims.html
+   │     │  ├─ favicon.ico
+   │     │  ├─ header.html
+   │     │  ├─ index.html
+   │     │  ├─ main.html
+   │     │  ├─ pub
+   │     │  │  ├─ app.css
+   │     │  │  └─ karate-logo.svg
+   │     │  ├─ signin.html
+   │     │  ├─ signout.html
+   │     │  ├─ submissions.html
+   │     │  └─ subs-main.html
+   │     └─ logback.xml
+   └─ test
+      ├─ java
+      │  ├─ app
+      │  │  └─ LocalRunner.java
+      │  ├─ karate-config-perf.js
+      │  ├─ karate-config.js
+      │  └─ logback-test.xml
+      └─ resources
+         └─ app
+            ├─ api
+            │  ├─ ApiTest.java
+            │  ├─ call
+            │  │  ├─ call-data.feature
+            │  │  ├─ call-tag.feature
+            │  │  ├─ called.feature
+            │  │  └─ caller.feature
+            │  ├─ data
+            │  │  ├─ data.csv
+            │  │  ├─ data.json
+            │  │  ├─ examples.csv
+            │  │  ├─ loop-csv.feature
+            │  │  ├─ outline-csv.feature
+            │  │  ├─ outline-examples-csv.feature
+            │  │  ├─ outline-examples-json.feature
+            │  │  ├─ outline-setup-function.feature
+            │  │  ├─ outline-setup-http.feature
+            │  │  ├─ outline-setup.feature
+            │  │  ├─ outline.feature
+            │  │  └─ read-json.feature
+            │  ├─ interop
+            │  │  ├─ encoded.bin
+            │  │  ├─ Helper.java
+            │  │  └─ interop.feature
+            │  ├─ match
+            │  │  ├─ JunitRunner.java
+            │  │  └─ match.feature
+            │  ├─ simple
+            │  │  ├─ httpbin.feature
+            │  │  ├─ jsonplace.feature
+            │  │  ├─ reset.feature
+            │  │  ├─ restful-booker.feature
+            │  │  └─ simple.feature
+            │  └─ subs
+            │     ├─ data-driven-csv.feature
+            │     ├─ data-driven.feature
+            │     ├─ reset.feature
+            │     ├─ simple.feature
+            │     └─ submissions.csv
+            ├─ mock
+            │  ├─ mock.feature
+            │  ├─ MockRunner.java
+            │  └─ test.feature
+            ├─ perf
+            │  ├─ TodoSimulation.java
+            │  └─ Utils.java
+            └─ ui
+               ├─ clear
+               │  └─ clear.feature
+               ├─ data
+               │  ├─ called.feature
+               │  ├─ data.feature
+               │  └─ find.js
+               ├─ delete
+               │  └─ delete.feature
+               ├─ edit
+               │  └─ edit.feature
+               ├─ hybrid
+               │  ├─ find.js
+               │  └─ hybrid.feature
+               └─ simple
+                  ├─ google.feature
+                  └─ simple.feature
+
+```

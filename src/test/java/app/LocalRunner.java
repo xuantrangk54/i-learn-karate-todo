@@ -21,7 +21,7 @@ class LocalRunner {
             server = HttpServer.config(config).http(8080).build();
             logger.warn("Server started at http://localhost:8080 ...");
             new Thread(() -> server.waitSync()).start();
-            Thread.sleep(20000);
+            Thread.sleep(2000);
             logger.warn("Server started at http://localhost:8080");
         }
     }
